@@ -220,7 +220,7 @@ Unfinished:
         prefix = args.hash[:8]
         output_archive = os.path.join(OUTPUT_DIR, "%s.zip" % prefix)
         # create a list of files to pack with zipFiles
-        input_files = [(os.path.join(v['path'], v['name']), v['name']) for v in saved_files]
+        input_files = [(os.path.join(saved_files[v]['path'], saved_files[v]['name']), saved_files[v]['name']) for v in saved_files]
         create_zip_archive(input_files=input_files, output_archive=output_archive)
 
         print("\nZipped files into %s" % output_archive)
