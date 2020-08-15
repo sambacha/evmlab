@@ -102,7 +102,7 @@ class MultiApi(object):
 
         if self.web3:
             try:
-                value = self.web3.eth.getStorageAt(addr, key, blnum)
+                value = self.web3.eth.getStorageAt(self.web3.toChecksumAddress(addr), key, blnum)
                 self._putCached(cachekey, value)
                 return value
             except Exception as e:

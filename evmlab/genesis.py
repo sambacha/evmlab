@@ -23,7 +23,7 @@ class Genesis(object):
             "homesteadBlock": 0, 
             "daoForkBlock": 0,
             "byzantiumBlock" : 2000,
-            "constantinopleBlock" : 2000,
+            "constantinopleBlock" : 0,
             "petersburgBlock" : 2000,
         }
 
@@ -143,7 +143,7 @@ class Genesis(object):
         self.blockNumber = int(blockNumber, 16)
 
     def setConfigHomestead(self):
-        self.config['constantinopleBlock'] = 2000
+        self.config['constantinopleBlock'] = 0
         self.config['byzantiumBlock'] = 2000
         self.config['eip158Block'] = 2000
         self.config['eip155Block'] = 2000

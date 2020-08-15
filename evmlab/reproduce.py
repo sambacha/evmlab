@@ -187,6 +187,7 @@ def reproduceTx(txhash, vm, api):
             "gas"       : tx['gas'], 
             "memory"    : False,
             "create"    : create,
+            "value"	: tx['value'],
         }
         if not done:
             print("Executing tx...")
